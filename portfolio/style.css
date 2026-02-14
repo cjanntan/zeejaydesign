@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  background: #FFFFFF;
+  color: #000000;
+  line-height: 1.4;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 16px 5%;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Desktop nav */
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-weight: 400;
+  font-size: 12px;
+  color: #707070;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 5% 80px;
+  background: #FFFFFF;
+}
+
+.hero-content {
+  max-width: 990px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero-content h1 {
+  font-weight: 200;
+  font-size: clamp(38px, 8vw, 58px);
+  line-height: 1.25;
+  color: #000;
+}
+
+.subtitle {
+  font-weight: 200;
+  font-size: clamp(20px, 5vw, 28px);
+  line-height: 1.12;
+  color: #707070;
+}
+
+.btn-browse {
+  width: 100%;
+  max-width: 208px;
+  height: 63px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-weight: 300;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-browse:hover {
+  background: #f8f8f8;
+  transform: translateY(-3px);
+}
+
+/* ==================== TABLET (768px+) ==================== */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 140px;
+  }
+
+  .btn-browse {
+    width: 208px;
+  }
+}
+
+/* ==================== DESKTOP (1200px+) ==================== */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 24px 100px;
+  }
+
+  .nav-container {
+    max-width: 1000px;
+    padding: 0;
+  }
+
+  .hero {
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .hero-content {
+    width: 990px;
+    gap: 48px;
+  }
+
+  .hero-content h1 {
+    font-size: 58px;
+    line-height: 140%;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    line-height: 112%;
+  }
+
+  .btn-browse {
+    width: 208px;
+    height: 63px;
+    font-size: 18px;
+  }
+}
